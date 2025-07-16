@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyBank - Account Entry</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 26px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    main {
+      max-width: 500px;
+      background-color: white;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #003366;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0053a0;
+    }
+
+    .success-msg {
+      text-align: center;
+      margin-top: 30px;
+      color: green;
+      font-size: 18px;
+    }
+
+    .admin-welcome {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    a.back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #006400;
+      text-decoration: none;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🏦 MyBank Admin Panel
+  </header>
+
+  <main>
+    
+
+    <h2>Account Details</h2>
+
+    <form action="adduserServlet" method="post">
+      <label for="accno">Account Number</label>
+      <input type="number" id="accno" name="accno" required>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="balance">Balance</label>
+      <input type="number" id="balance" name="balance" required>
+
+      <button type="submit">Submit Account</button>
+    </form>
+
+    <a class="back-link" href="dashboard.html">⬅ Back to Admin Page</a>
+  </main>
+
+</body>
+</html>

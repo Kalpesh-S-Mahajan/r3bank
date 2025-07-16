@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MyBank Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      padding-top: 120px; /* Space for the sticky header */
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      width: 100%;
+      padding: 25px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 32px;
+    }
+
+    .login-box {
+      background-color: white;
+      padding: 40px 35px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .login-box h2 {
+      margin-bottom: 25px;
+      color: #003366;
+      font-size: 26px;
+      text-align: center;
+    }
+
+    label {
+      font-size: 16px;
+      color: #333;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #003366;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      margin-top: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0053a0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏦 MyBank Portal</h1>
+  </header>
+
+  <form class="login-box" action="LoginServlet" method="post">
+    <h2>Login to Continue</h2>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+
+    <input type="submit" value="Login">
+  </form>
+
+</body>
+</html>
